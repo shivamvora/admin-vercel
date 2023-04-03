@@ -9,7 +9,7 @@ const ShowBookDetails = () => {
     const navigate = useNavigate();
     useEffect(() => {
         axios
-            .get(`http://localhost:8082/api/books/${id}`)
+            .get(`https://friend-zapier.herokuapp.com/api/books/${id}`)
             .then((res) => {
                 setBook(res.data);
             })
@@ -19,7 +19,7 @@ const ShowBookDetails = () => {
     }, [id]);
     const onDeleteClick = (id) => {
         axios
-            .delete(`http://localhost:8082/api/books/${id}`)
+            .delete(`https://friend-zapier.herokuapp.com/api/books/${id}`)
             .then((res) => {
                 navigate('/');
             })

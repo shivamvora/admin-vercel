@@ -16,7 +16,7 @@ const UpdateBookInfo = (props) => {
     const navigate = useNavigate();
     useEffect(() => {
         axios
-            .get(`http://localhost:8082/api/books/${id}`)
+            .get(`https://friend-zapier.herokuapp.com/api/books/${id}`)
             .then((res) => {
                 setBook({
                     // title: res.data.title,
@@ -47,7 +47,7 @@ const UpdateBookInfo = (props) => {
         };
 
         axios
-            .put(`http://localhost:8082/api/books/${id}`, data)
+            .put(`https://friend-zapier.herokuapp.com/api/books/${id}`, data)
             .then((res) => {
                 navigate(`/show-book/${id}`);
             })

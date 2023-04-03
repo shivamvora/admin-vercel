@@ -18,7 +18,7 @@ const CreateBook = (props) => {
     }
     const onSubmit = (e) => {
         e.preventDefault();
-        axios.post('http://localhost:8082/api/books', book).then((res) => {
+        axios.post('https://friend-zapier.herokuapp.com/api/books', book).then((res) => {
             setBook({
                 // title: '',
                 email: '',
